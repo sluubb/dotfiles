@@ -1,4 +1,0 @@
-program_options:
-  tray: true             # Show tray icon
-  notify: false          # Enable notifications
-  automount: true        # Enable automatic mounting

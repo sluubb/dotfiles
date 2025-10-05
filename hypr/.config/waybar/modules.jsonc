@@ -78,7 +78,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
+    "format": "{icon}  {capacity}%",
     "format-charging": "  {capacity}%",
     "format-plugged": "  {capacity}%",
     "format-alt": "{icon}  {time}",
@@ -87,20 +87,20 @@
 
   "pulseaudio": {
     "scroll-step": 1,
-    "format": "{icon} {volume}%  {format_source}",
-    "format-bluetooth": " {icon} {volume}%   {format_source}",
-    "format-bluetooth-muted": "    {format_source}",
+    "format": "{icon}  {volume}%  {format_source}",
+    "format-bluetooth": " {icon}  {volume}%  {format_source}",
+    "format-bluetooth-muted": "   {format_source}",
     "format-muted": "  {format_source}",
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [" ", " ", " "]
     }
   },
 

@@ -1,0 +1,10 @@
+backend = "fastresize"
+
+color_space = "lch"
+
+palette = "dark"
+
+[templates]
+hyprland = { template = 'hyprland', target = '~/.config/hypr/gen' }
+rofi = { template = 'rofi', target = '~/.config/rofi/gen' }
+waybar = { template = 'waybar', target = '~/.config/waybar/gen' }

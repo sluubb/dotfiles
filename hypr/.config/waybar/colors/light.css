@@ -1,4 +1,4 @@
-@import '../../../.cache/wal/colors-waybar.css';
+@import '../gen/colors.css';
 
 @define-color backgroundlight #FFFFFF;
 @define-color backgrounddark @color11;

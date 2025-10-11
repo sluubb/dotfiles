@@ -13,16 +13,9 @@ return {
             },
         },
         config = function()
-            local lspconfig = require('lspconfig')
-
-            lspconfig.lua_ls.setup {}
-            lspconfig.rust_analyzer.setup {}
-            lspconfig.zls.setup {
-                cmd = { 'zls' },
-                filetypes = { 'zig', 'zir' },
-                root_dir = lspconfig.util.root_pattern('build.zig', '.git') or vim.loop.cwd,
-                single_file_support = true,
-            }
+            vim.lsp.enable('lua_ls')
+            vim.lsp.enable('rust_analyzer')
+            vim.lsp.enable('zls')
 
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(args)

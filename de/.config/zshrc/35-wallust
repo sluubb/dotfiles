@@ -1,0 +1,5 @@
+SEQUENCES="$HOME/.cache/wallust/sequences"
+
+if [ -f "$SEQUENCES" ]; then
+    cat $SEQUENCES
+fi

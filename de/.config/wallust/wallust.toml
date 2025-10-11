@@ -1,8 +1,6 @@
-backend = "fastresize"
-
+backend = "thumb"
 color_space = "lch"
-
-palette = "dark"
+palette = "softdark16"
 
 [templates]
 hyprland = { template = 'hyprland', target = '~/.config/hypr/gen' }

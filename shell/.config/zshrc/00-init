@@ -1,3 +1,17 @@
 export EDITOR=nvim
 export PATH="/usr/lib/ccache/bin/:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
+
+
+DIRS=(
+    "$HOME/.oh-my-zsh"
+    "/usr/share/oh-my-zsh"
+)
+
+for dir in "${DIRS[@]}"; do
+    if [ -f "$dir/oh-my-zsh.sh" ]; then
+        export ZSH="$dir"
+        break
+    fi
+done
+
+export ZSH_CUSTOM="${DIRS[1]}/custom"

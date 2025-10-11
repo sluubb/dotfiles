@@ -8,3 +8,4 @@ palette = "dark"
 hyprland = { template = 'hyprland', target = '~/.config/hypr/gen' }
 rofi = { template = 'rofi', target = '~/.config/rofi/gen' }
 waybar = { template = 'waybar', target = '~/.config/waybar/gen' }
+pywalfox = { template = 'colors.json', target = '~/.cache/wal/colors.json' }

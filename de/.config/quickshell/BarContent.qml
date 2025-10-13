@@ -1,8 +1,16 @@
 import QtQuick
 import Quickshell
 
-Scope {
-    Text {
-	text: "testing"
+Item {
+    anchors {
+	fill: parent
+    }
+
+    Rectangle {
+	anchors {
+	    fill: parent
+	}
+
+	color: "white"
     }
 }

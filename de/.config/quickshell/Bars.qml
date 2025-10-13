@@ -5,13 +5,13 @@ Variants {
     model: Quickshell.screens
 
     Loader {
-	required property ShellScreen modelData
+	property ShellScreen modelData
 
-	id: bar
+	id: loader
 	active: true
 
 	PanelWindow {
-	    screen: bar.modelData
+	    screen: loader.modelData
 
 	    anchors {
 		top: true

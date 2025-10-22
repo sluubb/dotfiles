@@ -15,7 +15,7 @@ configuration {
     window-format:              "{w} · {c} · {t}";
 }
 
-@import "gen/colors.rasi"
+@import "colors.rasi"
 
 window {
     width:                        900px;

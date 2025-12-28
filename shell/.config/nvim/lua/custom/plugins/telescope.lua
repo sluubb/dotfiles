@@ -23,11 +23,6 @@ return {
 
             vim.keymap.set('n', '<space>th', require('telescope.builtin').help_tags)
             vim.keymap.set('n', '<space>td', require('telescope.builtin').find_files)
-            vim.keymap.set('n', '<space>tn', function()
-                require('telescope.builtin').find_files {
-                    cwd = vim.fn.stdpath('config'),
-                }
-            end)
         end,
     }
 }

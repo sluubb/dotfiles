@@ -4,3 +4,7 @@ for f in ~/.config/zshrc/*; do
         [[ -f $c ]] && source $c || source $f
     fi
 done
+
+path=(~/.local/bin $path)
+typeset -U path
+export PATH

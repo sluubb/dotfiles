@@ -1,0 +1,23 @@
+position: "top"
+anchor_to_edges: true
+height: 28
+start:
+  - type: "workspaces"
+    icon_size: 16
+  - type: "focused"
+    icon_size: 16
+  - type: "label"
+    label: ""
+    class: "right edge"
+center: [ ]
+end:
+  - type: "label"
+    label: ""
+    class: "left edge"
+  - type: "tray"
+    icon_size: 16
+  - type: "clock"
+    format: "%Y-%m-%d %H:%M:%S"
+    disable_popup: "true"
+  - type: "label"
+    label: "{{hyprctl devices -j | jq -r '.keyboards[] | select(.main==true) | .active_keymap' | cut -c1-3 | tr 'a-z' 'A-Z'}}"

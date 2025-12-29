@@ -1,0 +1,62 @@
+@define-color bg {{ background }};
+@define-color fg {{ foreground }};
+@define-color highlight {{ color10 }};
+@define-color transparent #00000000;
+
+* {
+    font-family: monospace;
+    font-size: 12px;
+    color: #cccccc;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    min-height: 0;
+}
+
+.background {
+    background: @transparent;
+}
+
+.menu * {
+    background: @bg;
+}
+.menu separator {
+    border-top: 1px solid @fg;
+}
+
+.workspaces {
+    border-bottom: 4px solid @bg;
+}
+.workspaces .item:not(:last-child) {
+    border-right: 2px solid @bg;
+    border-radius: 0 8px 0 0;
+}
+.workspaces .item.focused {
+    background: @bg;
+}
+.workspaces .item.focused label {
+    color: @highlight;
+}
+
+.widget.focused {
+    background: @bg;
+    padding: 0 16px;
+}
+
+#end .widget.label {
+    padding: 0 16px 0 0;
+}
+#end .widget:not(.edge) {
+    background: @bg;
+}
+
+.edge {
+    min-width: 28px;
+}
+.edge.right {
+    background: linear-gradient(135deg, @bg 0 50%, @transparent 50% 100%);
+}
+.edge.left {
+    background: linear-gradient(135deg, @transparent 0 50%, @bg 50% 100%);
+}

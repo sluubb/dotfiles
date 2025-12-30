@@ -37,6 +37,7 @@
 }
 .workspaces .item.focused label {
     color: @highlight;
+    font-weight: 600;
 }
 
 .widget.focused {

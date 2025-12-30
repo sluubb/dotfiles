@@ -25,15 +25,19 @@
     border-top: 1px solid @fg;
 }
 
-.workspaces {
-    border-bottom: 4px solid @bg;
-}
-.workspaces .item:not(:last-child) {
-    border-right: 2px solid @bg;
-    border-radius: 0 8px 0 0;
+.workspaces .item:not(.focused) {
+    background: @bg;
 }
 .workspaces .item.focused {
-    background: @bg;
+    border-top-right-radius: 24px;
+    border: 12px @bg;
+    border-style: solid solid none none;
+    margin: -12px -12px 0 0;
+}
+.workspaces .item.focused:not(:first-child) {
+    border-top-left-radius: 24px;
+    border-left-style: solid;
+    margin-left: -12px;
 }
 .workspaces .item.focused label {
     color: @highlight;

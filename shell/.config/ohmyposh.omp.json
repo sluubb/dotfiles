@@ -3,12 +3,32 @@
     "blocks": [
 	{
 	    "alignment": "left",
+	    "newline": true,
 	    "segments": [
 		{
 		    "foreground": "lightYellow",
 		    "style": "plain",
-		    "template": " @{{ .UserName }} »  ",
-		    "type": "session"
+		    "template": "{{ .Path }} ",
+		    "type": "path"
+		},
+		{
+		    "foreground": "lightYellow",
+		    "style": "plain",
+		    "template": "{{ .HEAD }}",
+		    "type": "git"
+		}
+	    ],
+	    "type": "prompt"
+	},
+	{
+	    "alignment": "left",
+	    "newline": true,
+	    "segments": [
+		{
+		    "foreground": "lightYellow",
+		    "style": "plain",
+		    "template": " »  ",
+		    "type": "text"
 		}
 	    ],
 	    "type": "prompt"
@@ -19,14 +39,11 @@
 		{
 		    "foreground": "lightYellow",
 		    "style": "plain",
-		    "template": "{{ .PWD }} ",
-		    "type": "path"
-		},
-		{
-		    "foreground": "lightYellow",
-		    "style": "plain",
-		    "template": "{{ .HEAD }}",
-		    "type": "git"
+		    "options": {
+			"threshold": 50
+		    },
+		    "template": "{{ .FormattedMs }} ",
+		    "type": "executiontime"
 		}
 	    ],
 	    "type": "rprompt"
@@ -40,5 +57,6 @@
 	"foreground": "lightYellow",
 	"template": " ~  "
     },
+    "final_space": false,
     "version": 4
 }

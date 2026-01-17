@@ -1,6 +1,6 @@
 @define-color bg {{ background }};
 @define-color fg {{ foreground }};
-@define-color highlight {{ color10 }};
+@define-color hl {{ color10 }};
 @define-color transparent #00000000;
 
 * {
@@ -8,20 +8,18 @@
     font-size: 12px;
     color: #cccccc;
     background-image: none;
-    border: none;
+    border-width: 0;
     border-radius: 0;
     outline: none;
     min-height: 0;
-}
-
-.background {
+    box-shadow: none;
     background: @transparent;
 }
 
-.menu * {
+.tray .menu contents, arrow {
     background: @bg;
 }
-.menu separator {
+.tray .menu separator {
     border-top: 1px solid @fg;
 }
 
@@ -29,6 +27,7 @@
     background: @bg;
 }
 .workspaces .item.focused {
+    background: @transparent;
     border-top-right-radius: 24px;
     border: 12px @bg;
     border-style: solid solid none none;
@@ -40,7 +39,7 @@
     margin-left: -12px;
 }
 .workspaces .item.focused label {
-    color: @highlight;
+    color: @hl;
     font-weight: 600;
 }
 

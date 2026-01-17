@@ -3,7 +3,7 @@ color_space = "lch"
 palette = "softdark16"
 
 [templates]
-hyprland = { template = 'hyprland/colors.conf', target = '~/.config/hypr/assets/colors.conf' }
-rofi = { template = 'rofi/colors.rasi', target = '~/.config/rofi/colors.rasi' }
+hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/assets/colors.conf' }
+rofi = { template = 'rofi.rasi', target = '~/.config/rofi/colors.rasi' }
 pywalfox = { template = 'colors.json', target = '~/.cache/wal/colors.json' }
 ironbar = { template = '../../ironbar/style-template.css', target = '~/.config/ironbar/style.css' }

@@ -21,8 +21,8 @@ return {
 
             require('telescope').load_extension('fzf')
 
-            vim.keymap.set('n', '<space>th', require('telescope.builtin').help_tags)
-            vim.keymap.set('n', '<space>td', require('telescope.builtin').find_files)
+            vim.keymap.set('n', '<leader>th', require('telescope.builtin').help_tags)
+            vim.keymap.set('n', '<leader>td', require('telescope.builtin').find_files)
         end,
     }
 }

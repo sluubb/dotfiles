@@ -1,7 +1,7 @@
 return {
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
+        version = '*',
         dependencies = {
             'nvim-lua/plenary.nvim',
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -10,8 +10,17 @@ return {
             require('telescope').setup {
                 pickers = {
                     find_files = {
-                        hidden = true,
                         theme = 'ivy',
+                        follow = true,
+                        hidden = true,
+                    },
+                    live_grep = {
+                        theme = 'ivy',
+                        hidden = true,
+                    },
+                    grep_string = {
+                        theme = 'ivy',
+                        hidden = true,
                     },
                 },
                 extensions = {
@@ -21,8 +30,12 @@ return {
 
             require('telescope').load_extension('fzf')
 
-            vim.keymap.set('n', '<leader>th', require('telescope.builtin').help_tags)
-            vim.keymap.set('n', '<leader>td', require('telescope.builtin').find_files)
+            local builtin = require('telescope.builtin')
+            vim.keymap.set('n', '<leader>tf', builtin.find_files)
+            vim.keymap.set('n', '<leader>th', builtin.help_tags)
+            vim.keymap.set('n', '<leader>tl', builtin.live_grep)
+            vim.keymap.set('n', '<leader>ts', builtin.grep_string)
+            vim.keymap.set('n', '<leader>tr', builtin.lsp_references)
         end,
     }
 }

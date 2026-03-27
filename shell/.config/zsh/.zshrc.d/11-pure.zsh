@@ -1,4 +1,4 @@
-if [[ $TERM == linux ]]; then
+if [[ "$TERM" == linux ]]; then
     export PURE_PROMPT_SYMBOL='>'
     export PURE_PROMPT_VICMD_SYMBOL='<'
     export PURE_SUSPENDED_JOBS_SYMBOL='+'

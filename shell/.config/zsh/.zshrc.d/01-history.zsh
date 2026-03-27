@@ -1,4 +1,4 @@
-HISTFILE=$state_dir/history
+HISTFILE="$state_dir/history"
 HISTSIZE=10000
 SAVEHIST=10000
 

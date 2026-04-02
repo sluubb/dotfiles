@@ -1,0 +1,41 @@
+[config]
+version_check = false
+fallback_color = "#adb5bd"
+prefer = "closest-to-fallback"
+contrast = 0.0
+caching = false
+expr_prefix = "{{"
+expr_postfix = "}}"
+block_prefix = "<*"
+block_postfix = "*>"
+
+[templates.hyprland]
+input_path = 'templates/hyprland-palette.conf'
+output_path = '~/.config/hypr/palettes/matugen.conf'
+post_hook = 'hyprctl reload'
+
+[templates.ghostty]
+input_path = 'templates/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty'
+
+[templates.ironbar]
+input_path = '../ironbar/style-template.css'
+output_path = '~/.config/ironbar/style.css'
+
+[templates.fuzzel]
+input_path = 'templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/theme.ini'
+
+[templates.mako]
+input_path = 'templates/mako'
+output_path = '~/.config/mako/theme'
+
+[templates.gtk3]
+input_path = 'templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = 'templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'

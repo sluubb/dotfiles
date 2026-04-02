@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+layouts=(US SE)
+i=$(hyprctl devices -j | jq -r '.keyboards[] | select(.main==true) | .active_layout_index')
+(( i >= 0 && i < ${#layouts[@]} )) && echo "${layouts[i]}"

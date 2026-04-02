@@ -19,5 +19,7 @@ end:
   - type: "clock"
     format: "%Y-%m-%dT%H:%M:%S%:z"
     disable_popup: true
-  - type: "label"
-    label: "{{hyprctl devices -j | jq -r '.keyboards[] | select(.main==true) | .active_keymap' | cut -c1-3 | tr 'a-z' 'A-Z'}}"
+  - type: "script"
+    cmd: "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/get-active-keyboard-layout"
+    mode: "watch"
+    interval: 100

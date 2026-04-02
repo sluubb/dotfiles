@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/wallpaper"
+wallpapers_dir="$HOME/wallpapers"
 
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
-hyprctl hyprpaper wallpaper ",$WALLPAPER,cover"
+wallpaper="$(find "$wallpapers_dir" -type f | shuf -n 1)"
+hyprctl hyprpaper wallpaper ",$wallpaper,cover"
 
-wallust run $WALLPAPER
-hyprctl reload
+matugen image "$wallpaper"

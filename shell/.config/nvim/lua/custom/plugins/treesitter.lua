@@ -17,14 +17,7 @@ return {
                 'markdown_inline',
             }
 
-            require('nvim-treesitter').install(parsers):wait(300000)
-
-            vim.api.nvim_create_autocmd('FileType', {
-                pattern = parsers,
-                callback = function()
-                    vim.treesitter.start()
-                end,
-            })
+            require('nvim-treesitter').install(parsers)
         end,
     },
 }

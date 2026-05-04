@@ -1,1 +1,3 @@
 include=~/.config/mako/theme
+
+default-timeout=10000

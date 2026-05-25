@@ -9,9 +9,13 @@ expr_postfix = "}}"
 block_prefix = "<*"
 block_postfix = "*>"
 
-[templates.hyprland]
+[templates.hyprland_conf]
 input_path = 'templates/hyprland-palette.conf'
-output_path = '~/.config/hypr/palettes/matugen.conf'
+output_path = '~/.config/hypr/palette.conf'
+
+[templates.hyprland_lua]
+input_path = 'templates/hyprland-palette.lua'
+output_path = '~/.config/hypr/palette.lua'
 post_hook = 'hyprctl reload'
 
 [templates.ghostty]
